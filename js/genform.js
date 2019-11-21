@@ -27,16 +27,65 @@ function generate(filename, field_array){
         }).join('-')
     }
 
-    field_array.forEach(function(e){
-        console.log(e)
-        var inputs = document.getElementById(e).querySelector(".list-of-inputs")
+    field_array.forEach(function(e) {
+        var inputs = document.getElementById(e).querySelector(".list-of-inputs");
+        var children = inputs.querySelectorAll("input");
+        var isArray = false;
+        for (var i=0; i < children.length; i++) {
+            var child = children[i];
+            var nextChild = null;
 
-        inputs.querySelectorAll("input").forEach(function(child) {
-            if(child.value.length > 0){
-                text += "\t<key>" + camelToHyphen(e) + "</key> \n" + "\t<string>" + child.value + "</string>\n";
+            var nextIndex = i+1;
+            if (nextIndex < children.length) {
+                nextChild = children[nextIndex];
             }
-        });
+
+            if (child.value.length == 0) {
+                if (isArray) {
+                    text += "\t</array>\n";
+                    isArray = false;
+                }
+                
+                continue;
+            }
+
+            if (nextChild == null) { // Last element
+                if (child.getAttribute("class") == "input") {
+                    text += "\t<key>" + camelToHyphen(e) + "</key>\n" + "\t<string>" + child.value + "</string>\n";
+
+                } else if (child.getAttribute("class") == "input2") {
+                    text += "\t\t<string>" + child.value + "</string>\n";
+                    text += "\t</array>\n";
+                    isArray = false;
+                }
+
+                return;
+            }
+
+            if (child.getAttribute("class") == "input" && nextChild.getAttribute("class") == "input2") { // Start array
+                text += "\t<key>" + camelToHyphen(e) + "</key>\n";
+                text += "\t<array>\n" + "\t\t<string>" + child.value + "</string>\n";
+                isArray = true;
+
+            } else if (child.getAttribute("class") == "input2" && (nextChild.getAttribute("class") == "input")) { // Close array
+                text += "\t\t<string>" + child.value + "</string>\n";
+                text += "\t</array>\n";
+                isArray = false;
+            
+            } else if (child.getAttribute("class") == "input" && nextChild.getAttribute("class") == "input") { // Only one element
+                text += "\t<key>" + camelToHyphen(e) + "</key>\n" + "\t<string>" + child.value + "</string>\n";
+            
+            } else if (child.getAttribute("class") == "input2" && nextChild.getAttribute("class") == "input2") { // Elements inside an array
+                text += "\t\t<string>" + child.value + "</string>\n";
+            }
+        }
     });
+
+    var lastChar = text[text.length-1];
+    // Remove last character if it's a new line
+    if (lastChar == "\n") {
+        text = text.slice(0, -1);
+    }
 
     text += `
     </dict>
@@ -55,7 +104,7 @@ function addAlternative(button) {
     
     var newInput = document.createElement("INPUT")
     newInput.setAttribute("placeholder", "Another possible alternative")
-    newInput.setAttribute("class", "input")
+    newInput.setAttribute("class", "input2")
 
     var newInputControl = document.createElement("DIV")
     newInputControl.setAttribute("class", "control is-expanded")

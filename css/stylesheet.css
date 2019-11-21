@@ -97,3 +97,378 @@ body {
 #txt-notification.opaque {
     opacity: 1;
 }
+
+input2 {
+  margin: 0;
+}
+
+input2 {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+input2[type="checkbox"],
+input2[type="radio"] {
+  vertical-align: baseline;
+}
+
+.input2 {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: calc(0.625em - 1px);
+  padding-right: calc(0.625em - 1px);
+  padding-top: calc(0.375em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: white;
+  border-color: #dbdbdb;
+  color: #363636;
+  -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+          box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  max-width: 100%;
+  width: 100%;
+}
+
+.input2:focus, .input2.is-focused, .input2:active, .input2.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
+  outline: none;
+}
+
+.input2[disabled],
+.textarea[disabled] {
+  cursor: not-allowed;
+}
+
+.input2::-moz-placeholder,
+.textarea::-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input2::-webkit-input2-placeholder,
+.textarea::-webkit-input2-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input2:-moz-placeholder,
+.textarea:-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input2:-ms-input2-placeholder,
+.textarea:-ms-input2-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input2:hover, .input2.is-hovered,
+.textarea:hover,
+.textarea.is-hovered {
+  border-color: #b5b5b5;
+}
+
+.input2:focus, .input2.is-focused, .input2:active, .input2.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
+  border-color: #3273dc;
+  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input2[disabled],
+.textarea[disabled] {
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #7a7a7a;
+}
+
+.input2[disabled]::-moz-placeholder,
+.textarea[disabled]::-moz-placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+
+.input2[disabled]::-webkit-input2-placeholder,
+.textarea[disabled]::-webkit-input2-placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+
+.input2[disabled]:-moz-placeholder,
+.textarea[disabled]:-moz-placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+
+.input2[disabled]:-ms-input2-placeholder,
+.textarea[disabled]:-ms-input2-placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+
+.input2[readonly],
+.textarea[readonly] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.input2.is-white,
+.textarea.is-white {
+  border-color: white;
+}
+
+.input2.is-white:focus, .input2.is-white.is-focused, .input2.is-white:active, .input2.is-white.is-active,
+.textarea.is-white:focus,
+.textarea.is-white.is-focused,
+.textarea.is-white:active,
+.textarea.is-white.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.25);
+}
+
+.input2.is-black,
+.textarea.is-black {
+  border-color: #0a0a0a;
+}
+
+.input2.is-black:focus, .input2.is-black.is-focused, .input2.is-black:active, .input2.is-black.is-active,
+.textarea.is-black:focus,
+.textarea.is-black.is-focused,
+.textarea.is-black:active,
+.textarea.is-black.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(10, 10, 10, 0.25);
+}
+
+.input2.is-light,
+.textarea.is-light {
+  border-color: whitesmoke;
+}
+
+.input2.is-light:focus, .input2.is-light.is-focused, .input2.is-light:active, .input2.is-light.is-active,
+.textarea.is-light:focus,
+.textarea.is-light.is-focused,
+.textarea.is-light:active,
+.textarea.is-light.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
+}
+
+.input2.is-dark,
+.textarea.is-dark {
+  border-color: #363636;
+}
+
+.input2.is-dark:focus, .input2.is-dark.is-focused, .input2.is-dark:active, .input2.is-dark.is-active,
+.textarea.is-dark:focus,
+.textarea.is-dark.is-focused,
+.textarea.is-dark:active,
+.textarea.is-dark.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25);
+}
+
+.input2.is-primary,
+.textarea.is-primary {
+  border-color: #00d1b2;
+}
+
+.input2.is-primary:focus, .input2.is-primary.is-focused, .input2.is-primary:active, .input2.is-primary.is-active,
+.textarea.is-primary:focus,
+.textarea.is-primary.is-focused,
+.textarea.is-primary:active,
+.textarea.is-primary.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+}
+
+.input2.is-link,
+.textarea.is-link {
+  border-color: #3273dc;
+}
+
+.input2.is-link:focus, .input2.is-link.is-focused, .input2.is-link:active, .input2.is-link.is-active,
+.textarea.is-link:focus,
+.textarea.is-link.is-focused,
+.textarea.is-link:active,
+.textarea.is-link.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.input2.is-info,
+.textarea.is-info {
+  border-color: #209cee;
+}
+
+.input2.is-info:focus, .input2.is-info.is-focused, .input2.is-info:active, .input2.is-info.is-active,
+.textarea.is-info:focus,
+.textarea.is-info.is-focused,
+.textarea.is-info:active,
+.textarea.is-info.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+}
+
+.input2.is-success,
+.textarea.is-success {
+  border-color: #23d160;
+}
+
+.input2.is-success:focus, .input2.is-success.is-focused, .input2.is-success:active, .input2.is-success.is-active,
+.textarea.is-success:focus,
+.textarea.is-success.is-focused,
+.textarea.is-success:active,
+.textarea.is-success.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(35, 209, 96, 0.25);
+}
+
+.input2.is-warning,
+.textarea.is-warning {
+  border-color: #ffdd57;
+}
+
+.input2.is-warning:focus, .input2.is-warning.is-focused, .input2.is-warning:active, .input2.is-warning.is-active,
+.textarea.is-warning:focus,
+.textarea.is-warning.is-focused,
+.textarea.is-warning:active,
+.textarea.is-warning.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(255, 221, 87, 0.25);
+}
+
+.input2.is-danger,
+.textarea.is-danger {
+  border-color: #ff3860;
+}
+
+.input2.is-danger:focus, .input2.is-danger.is-focused, .input2.is-danger:active, .input2.is-danger.is-active,
+.textarea.is-danger:focus,
+.textarea.is-danger.is-focused,
+.textarea.is-danger:active,
+.textarea.is-danger.is-active {
+  -webkit-box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);
+          box-shadow: 0 0 0 0.125em rgba(255, 56, 96, 0.25);
+}
+
+.input2.is-small,
+.textarea.is-small {
+  border-radius: 2px;
+  font-size: 0.75rem;
+}
+
+.input2.is-medium,
+.textarea.is-medium {
+  font-size: 1.25rem;
+}
+
+.input2.is-large,
+.textarea.is-large {
+  font-size: 1.5rem;
+}
+
+.input2.is-fullwidth,
+.textarea.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+.input2.is-inline,
+.textarea.is-inline {
+  display: inline;
+  width: auto;
+}
+
+.input2.is-rounded {
+  border-radius: 290486px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.input2.is-static {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.checkbox input2,
+.radio input2 {
+  cursor: pointer;
+}
+
+.control.has-icon .input2:focus + .icon {
+  color: #7a7a7a;
+}
+
+.control.has-icon .input2.is-small + .icon {
+  font-size: 0.75rem;
+}
+
+.control.has-icon .input2.is-medium + .icon {
+  font-size: 1.25rem;
+}
+
+.control.has-icon .input2.is-large + .icon {
+  font-size: 1.5rem;
+}
+
+.control.has-icon:not(.has-icon-right) .input2 {
+  padding-left: 2.25em;
+}
+
+.control.has-icon.has-icon-right .icon {
+  right: 0;
+}
+
+.control.has-icon.has-icon-right .input2 {
+  padding-right: 2.25em;
+}
+
+.control.has-icons-left .input2:focus ~ .icon {
+  color: #7a7a7a;
+}
+
+.control.has-icons-left .input2.is-small ~ .icon {
+  font-size: 0.75rem;
+}
+
+.control.has-icons-left .input2.is-medium ~ .icon {
+  font-size: 1.25rem;
+}
+
+.control.has-icons-left .input2.is-large ~ .icon {
+  font-size: 1.5rem;
+}
+
+.control.has-icons-left .input2 {
+  padding-left: 2.25em;
+}
+
+.control.has-icons-right .input2 {
+  padding-right: 2.25em;
+}
+
+.panel-block input2[type="checkbox"] {
+  margin-right: 0.75em;
+}

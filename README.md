@@ -1,6 +1,6 @@
 # securityplist.ivrodriguez.com
 
-![The website of the security.plist project, a proposed standard which allows iOS applications to define security policies](https://user-images.githubusercontent.com/18099289/42649227-5bbbb1f4-8609-11e8-988c-ad7b41b8873e.png)
+![The website of the security.plist project, a proposed standard which allows iOS applications to define security policies](https://github.com/ivRodriguezCA/securitytxt.org/blob/master/securityplist-website.png?raw=true)
 
 ## Contributing
 

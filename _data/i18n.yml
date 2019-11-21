@@ -3,12 +3,10 @@ en:
     faq: FAQ
     q1: What is the main purpose of security.plist?
     a1: The main purpose of security.plist is to help make things easier for companies and security researchers when trying to secure platforms. Thanks to security.plist, security researchers can easily get in touch with companies about security issues.
-    q2: Is security.plist an RFC?
-    a2: "security.plist is currently an Internet draft that has been submitted for RFC review. This means that security.plist is still in the early stages of development. We welcome contributions from the public: "
-    q3: Where should I put the security.plist file?
-    a3: The current draft states that the security.plist file should be located under the top-level directory. We are currently debating whether or not the file should be placed under the /.well-known/ path (/.well-known/security.plist) [RFC5785]. The discussion can be found here.
-    q4: Will adding an email address expose me to spam bots?
-    a4: The email value is an optional field. If you are worried about spam you can set a URI as the value and link to your security policy.
+    q2: Where should I put the security.plist file?
+    a2: The current draft states that the security.plist file should be located under the top-level directory. We are currently debating whether or not the file should be placed under the /.well-known/ path (/.well-known/security.plist) [RFC5785]. The discussion can be found here.
+    q3: Will adding an email address expose me to spam bots?
+    a3: The email value is an optional field. If you are worried about spam you can set a URI as the value and link to your security policy.
     generate: Generate your security.plist file
     contributors: Contributors
     thank_you: "The editor would like to acknowledge the help provided during the development of security.plist by the following individuals:"
