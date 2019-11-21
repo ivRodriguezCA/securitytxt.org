@@ -2,15 +2,20 @@ textareaElement = document.getElementById("text-to-copy");
 
 genform.addEventListener("submit", function(event){
     event.preventDefault();
-    generate('security.txt', [
-        "contact", "encryption", "acknowledgments", "preferredLanguages", "canonical", "policy", "hiring"
+    generate('security.plist', [
+        "contact", "encryption", "acknowledgments", "preferredLanguages", "policy", "hiring"
     ]);
 
     scrollToStepTwo()
 });
 
 function generate(filename, field_array){
-    var text = "";
+    var text = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+    `;
     
     // Converts camel case like 'abcDefGhi' into
     // the format 'Abc-Def-Ghi'
@@ -28,10 +33,15 @@ function generate(filename, field_array){
 
         inputs.querySelectorAll("input").forEach(function(child) {
             if(child.value.length > 0){
-                text += camelToHyphen(e) + ": " + child.value + "\n";
+                text += "\t<key>" + camelToHyphen(e) + "</key> \n" + "\t<string>" + child.value + "</string>\n";
             }
         });
     });
+
+    text += `
+    </dict>
+    </plist>
+    `;
 
     textareaElement.value = text;
 

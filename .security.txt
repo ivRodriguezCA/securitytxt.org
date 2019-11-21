@@ -1,5 +1,3 @@
 # If you would like to report a security issue
-# you may report it to Ed on HackerOne.
-Contact: https://hackerone.com/ed
-Encryption: https://keybase.pub/edoverflow/pgp_key.asc
-Acknowledgements: https://hackerone.com/ed/thanks
+# you may report it to me on Twitter.
+Contact: https://twitter.com/ivRodriguezCA

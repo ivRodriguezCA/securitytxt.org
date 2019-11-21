@@ -42,16 +42,6 @@ directives:
         placeholder: en, es, ru
         spec: 7
     -
-        name: Canonical
-        id: canonical
-        tags: ['Optional', 'Only 1 allowed']
-        help: >
-            The most common URL for accessing your security.txt file. It is important to include this if you are
-            digitally signing the security.txt file, so that researchers can know for sure that you didn't just steal
-            someone else's file with the same content.
-        placeholder: https://example.com/.well-known/security.txt
-        spec: 2
-    -
         name: Policy
         id: policy
         tags: ['Optional']
@@ -72,7 +62,7 @@ directives:
 <div id="txt-notification">
     <div class="notification is-success is-pulled">
         <button onclick="removeNotification()" class="delete"></button>
-        <h1>Your security.txt file has been copied to your clipboard!</h1>
+        <h1>Your security.plist file has been copied to your clipboard!</h1>
     </div>
 </div>
 
@@ -83,7 +73,7 @@ directives:
             “When security risks in web services are discovered by independent security
             researchers who understand the severity of the risk, they often lack the
             channels to disclose them properly. As a result, security issues may be left
-            unreported. security.txt defines a standard to help organizations define the
+            unreported. security.plist defines a standard to help organizations define the
             process for security researchers to disclose security vulnerabilities securely.”
         </p>
     </div>
@@ -92,7 +82,7 @@ directives:
 <section class="section">
     <div class="container">
         <h1 class="title">Step 1</h1>
-        <p>Create a text file called <code>security.txt</code> under the <code>.well-known</code> directory of your project.</p>
+        <p>Create a text file called <code>security.plist</code> under the <code>.well-known</code> directory of your project.</p>
         <br>
         <form id="genform">
             {% for directive in page.directives %}
@@ -130,7 +120,7 @@ directives:
                     </div>
                 </fieldset>
             {% endfor %}
-           <input class="button is-success" type="submit" value="Generate security.txt file">
+           <input class="button is-success" type="submit" value="Generate security.plist file">
         </form>
     </div>
 </section>
@@ -138,7 +128,7 @@ directives:
 <section class="section">
     <div class="container">
         <h1 class="title" id="step-two">Step 2</h1>
-        <p>You are ready to go! Publish your security.txt file. If you want to give security researchers confidence that your security.txt file is authentic, and not planted by an attacker, consider <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/draft-foudil-securitytxt-05#section-3.4">digitally signing</a> the file with an OpenPGP cleartext signature.</p>
+        <p>You are ready to go! Publish your security.plist file. If you want to give security researchers confidence that your security.plist file is authentic, and not planted by an attacker, consider <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/draft-foudil-securitytxt-05#section-3.4">digitally signing</a> the file with an OpenPGP cleartext signature.</p>
         <div class="field">
           <div class="control">
             <textarea id="text-to-copy" class="textarea" readonly></textarea>
@@ -155,14 +145,14 @@ directives:
 <section class="section">
     <div class="container content">
         <h1 class="title">Frequently asked questions</h1>
-        <h5>What is the main purpose of security.txt?</h5>
-        <p>The main purpose of security.txt is to help make things easier for companies and security researchers when trying to secure platforms. Thanks to security.txt, security researchers can easily get in touch with companies about security issues.</p>
-        <h5>Is security.txt an <a href="https://en.wikipedia.org/wiki/Request_for_Comments"><abbr title="Request For Comments">RFC</abbr></a>?</h5>
-        <p>security.txt is currently an Internet draft that has been submitted for <abbr title="Request For Comments">RFC</abbr> review. This means that security.txt is still in the early stages of development. We welcome contributions from the public: <a href="https://github.com/securitytxt/security-txt">https://github.com/securitytxt/security-txt</a></p>
-        <h5>Where should I put the security.txt file?</h5>
-        <p>For websites, the security.txt file should be placed under the <code>/.well-known/</code> path (<code>/.well-known/security.txt</code>) [<a href="https://tools.ietf.org/html/rfc5785"><abbr title="Request For Comments">RFC</abbr>5785</a>]. It can also be placed in the root directory (<code>/security.txt</code>) of a website, especially if the <code>/.well-known/</code> directory cannot be used for technical reasons, or simply as a fallback. The file can be placed in both locations of a website at the same time. For code repositories, the file should be placed in the root directory of the repository.</p>
+        <h5>What is the main purpose of security.plist?</h5>
+        <p>The main purpose of security.plist is to help make things easier for companies and security researchers when trying to secure platforms. Thanks to security.plist, security researchers can easily get in touch with companies about security issues.</p>
+        <h5>Is security.plist an <a href="https://en.wikipedia.org/wiki/Request_for_Comments"><abbr title="Request For Comments">RFC</abbr></a>?</h5>
+        <p>security.plist is currently an Internet draft that has been submitted for <abbr title="Request For Comments">RFC</abbr> review. This means that security.plist is still in the early stages of development. We welcome contributions from the public: <a href="https://github.com/securitytxt/security-txt">https://github.com/securitytxt/security-txt</a></p>
+        <h5>Where should I put the security.plist file?</h5>
+        <p>For iOS applications, the security.plist file should be placed under the <code>/.well-known/</code> path (<code>/.well-known/security.plist</code>) [<a href="https://tools.ietf.org/html/rfc5785"><abbr title="Request For Comments">RFC</abbr>5785</a>]. It can also be placed in the root directory (<code>/security.plist</code>) of a website, especially if the <code>/.well-known/</code> directory cannot be used for technical reasons, or simply as a fallback. The file can be placed in both locations of a website at the same time. For code repositories, the file should be placed in the root directory of the repository.</p>
 				<h5>Are there any settings I should apply to the file?</h5>
-				<p>The security.txt file should have an Internet Media Type of <code>text/plain</code> and must be served over HTTPS.</p>
+				<p>The security.plist file should have an Internet Media Type of <code>text/plain</code> and must be served over HTTPS.</p>
         <h5>Will adding an email address expose me to spam bots?</h5>
         <p>The email value is an optional field. If you are worried about spam, you can set a URI as the value and link to your security policy.</p>
     </div>
@@ -171,7 +161,7 @@ directives:
 <section class="section is-medium">
     <div class="container content has-text-centered is-fluid">
         <h1 class="title">Spread the word</h1>
-        <a target="_blank" class="button is-info" href="https://twitter.com/intent/tweet?text=security.txt%20-%20A%20proposed%20standard%20that%20allows%20websites%20to%20define%20security%20policies.%20https%3A%2F%2Fsecuritytxt.org%2F">Share on Twitter 📣 🎉 ⚡️ 🔥</a>
+        <a target="_blank" class="button is-info" href="https://twitter.com/intent/tweet?text=security.plist%20-%20A%20proposed%20standard%20that%20allows%20iOS%20applications%20to%20define%20security%20policies.%20https%3A%2F%2Fsecurityplist.ivrodriguez.com%2F">Share on Twitter 📣 🎉 ⚡️ 🔥</a>
     </div>
 </section>
 
